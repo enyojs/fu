@@ -42,14 +42,14 @@
 			new enyo.Control({
 				components: [
 					{style: "background-color: #D7D7D7; padding: 8px; text-align: center;", content: "Tabbar"},
-					{className: "tabbar", onmousedown: "tabbarSelect", components: [
-						{className: "active tab", content: "Tabitha"},
-						{className: "tab", content: "Tablature"},
-						{className: "tab", onmousedown: "tabSelect", components: [
-							{tagName: "span", content: "Tablet"},
-							{tagName: "span", content: " [ X ]", onmousedown: "closeDown", onclick: "closeClick"}
+					{classes: "tabbar", onmousedown: "tabbarSelect", components: [
+						{classes: "active tab", content: "Tabitha"},
+						{classes: "tab", content: "Tablature"},
+						{classes: "tab", onmousedown: "tabSelect", components: [
+							{tag: "span", content: "Tablet"},
+							{tag: "span", content: " [ X ]", onmousedown: "closeDown", onclick: "closeClick"}
 						]},
-						{className: "tab", content: "Sabitia"}
+						{classes: "tab", content: "Sabitia"}
 					]}
 				],
 				tabbarSelect: function(inSender, inEvent) {
@@ -59,9 +59,9 @@
 				},
 				tabSelect: function(inSender) {
 					enyo.forEach(inSender.container.getClientControls(), function(inC) {
-						inC.removeClass("active");
+						inC.removeClasses("active");
 					});
-					inSender.addClass("active");
+					inSender.addClasses("active");
 				},
 				closeDown: function(inSender, inEvent) {
 					inEvent.stopPropagation();

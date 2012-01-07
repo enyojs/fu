@@ -39,17 +39,17 @@
 	<div style="background-color: #D7D7D7">&nbsp;</div>
 	<script>
 		document.write(new enyo.Control({components: [
-				{className: "tabbar", components: [
-					{className: "active tab", content: "Tabitha", onclick: "tabClick"},
-					{className: "tab", content: "Sabitia", onclick: "tabClick"},
-					{className: "tab", content: "Tablature", onclick: "tabClick"},
+				{classes: "tabbar", components: [
+					{classes: "active tab", content: "Tabitha", onclick: "tabClick"},
+					{classes: "tab", content: "Sabitia", onclick: "tabClick"},
+					{classes: "tab", content: "Tablature", onclick: "tabClick"},
 				]}
 			],
 			tabClick: function(inSender) {
 				enyo.forEach(inSender.container.getClientControls(), function(inC) {
-					inC.removeClass("active");
+					inC.removeClasses("active");
 				});
-				inSender.addClass("active");
+				inSender.addClasses("active");
 			}
 		}).generateHtml());
 	</script>
