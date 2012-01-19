@@ -1,4 +1,4 @@
-.theme-fu button:focus,
+.theme-fu .theme-fu button:focus,
 .theme-fu .button:focus {
 	outline: none;
 }
@@ -12,18 +12,30 @@
 	background-color: #CDCDCD;
 	/**/
 	margin: 2px 8px 2px 1px;
-	padding: 0.3em 0.7em;
+	padding: 0.5em 0.7em;
 	border: 0;
-	border-radius: 6px;
+	-moz-border-radius: .2em;
+	border-radius: .2em;
 	/**/
 	-webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
 	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+.theme-fu.dark button,
+.theme-fu.dark .button {
+	background-color: #484848;
+	color: #ababab;
+}
+
 .theme-fu button:enabled:hover, .theme-fu button:hover, 
 .theme-fu .button:enabled:hover, .theme-fu .button:hover {
 	background-color: #C0C0C0;
+}
+
+.theme-fu.dark button:enabled:hover, .theme-fu.dark button:hover, 
+.theme-fu.dark .button:enabled:hover, .theme-fu.dark .button:hover {
+	background-color: #383838;
 }
 
 .theme-fu button:enabled:active, .theme-fu button:active,
