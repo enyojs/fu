@@ -3,9 +3,9 @@
 <head>
 	<title></title>
 	<!-- -->
-	<link href="button.css" rel="stylesheet" type="text/css" />
-	<link href="tab.css" rel="stylesheet" type="text/css" />
-	<link href="input.css" rel="stylesheet" type="text/css" />
+	<link href="../source/button.css" rel="stylesheet" type="text/css" />
+	<link href="../source/tab.css" rel="stylesheet" type="text/css" />
+	<link href="../source/input.css" rel="stylesheet" type="text/css" />
 	<!-- -->
 	<script type="text/javascript">
 		enyo = {};
@@ -24,7 +24,7 @@
 		}
 	</style>
 	<!-- -->
-	<script src="../minified/core.js" type="text/javascript"></script>
+	<script src="../../../enyo/enyo.js" type="text/javascript"></script>
 </head>
 <body class="theme-fu unselectable">
 	<button class="button">Button</button>
@@ -59,9 +59,9 @@
 				},
 				tabSelect: function(inSender) {
 					enyo.forEach(inSender.container.getClientControls(), function(inC) {
-						inC.removeClasses("active");
+						inC.removeClass("active");
 					});
-					inSender.addClasses("active");
+					inSender.addClass("active");
 				},
 				closeDown: function(inSender, inEvent) {
 					inEvent.stopPropagation();
