@@ -1,5 +1,7 @@
 .theme-fu .tabbar {
+	/*
 	background-color: #C3C3C3;
+	*/
 	white-space: nowrap;
 	position: relative;
 }
@@ -30,10 +32,16 @@
 	background-color: #C0C0C0;
 }
 
-.theme-fu .tab.active/*, .theme-fu .tab:active*/ {
+.theme-fu .tab.active, .theme-fu .active-tab-bg {
 	background-color: #D7D7D7;
+}
+
+.theme-fu .tab.active {
+	/*
+	background-color: #D7D7D7;
+	Xfont-weight: bold;
+	*/
 	box-shadow: none;
 	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
-	Xfont-weight: bold;
 	color: Black;
 }

@@ -1,9 +1,10 @@
-.theme-fu input:focus,
-.theme-fu .input:focus {
+/*.theme-fu input:focus,*/
+.theme-fu .input:focus,
+.theme-fu .input.focus {
 	outline: none;
 }
 
-.theme-fu input,
+/*.theme-fu input,*/
 .theme-fu .input {
 	padding: 0.6em;
 	border: 0;
